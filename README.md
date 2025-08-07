@@ -62,16 +62,30 @@ The following MongoDB aggregation queries are implemented:
 ## 📁 Project Structure
 
 ```
+Aggregation-and-Indexing/
+├── node_modules/                # Node.js dependencies
 ├── src/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── repo/
-│   └── index.ts
-├── .env
-├── package.json
-└── README.md
+│   ├── config/                  # Configuration files (e.g., DB & App config)
+│   │   ├── AppConfig.ts
+│   │   └── Database.ts
+│   ├── controllers/             # Controller layer (API logic)
+│   │   └── AggregationController.ts
+│   ├── models/                  # Mongoose models
+│   │   └── OrderModel.ts
+│   ├── repositories/            # Aggregation logic (MongoDB queries)
+│   │   └── AggregationRepo.ts
+│   ├── routes/                  # Express routing
+│   │   └── AggregationRoute.ts
+│   ├── services/                # Service layer (business logic)
+│   │   └── AggregationService.ts
+│   ├── server.ts                # Entry point for server
+│   └── seed.ts                  # Database seeding script
+├── .env                         # Environment variables
+├── .env.sample                  # Sample environment file
+├── package.json                 # NPM package definitions
+├── package-lock.json            # NPM dependency lock
+├── tsconfig.json                # TypeScript configuration
+├── README.md
 ```
 
 ---
