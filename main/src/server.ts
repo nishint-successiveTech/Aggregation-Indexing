@@ -2,6 +2,7 @@ import AppConfig from "./config/AppConfig";
 import Database from "./config/Database";
 import express, { Application } from "express";
 import AggregationRoute from "./routes/AggregationRoute";
+import IndexingRoute from "./routes/IndexingRoute";
 
 class AppServer {
   private static app: Application = express();
@@ -21,6 +22,7 @@ class AppServer {
   }
   private static getAllRoutes() {
     this.app.use("/api/aggregation", AggregationRoute.getAggregationRoute());
+    this.app.use("/api/indexing", IndexingRoute.getAllIndexRoutes());
   }
 }
 
