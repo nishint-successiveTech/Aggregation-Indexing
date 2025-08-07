@@ -63,29 +63,37 @@ The following MongoDB aggregation queries are implemented:
 
 ```
 Aggregation-and-Indexing/
-├── node_modules/                # Node.js dependencies
-├── src/
-│   ├── config/                  # Configuration files (e.g., DB & App config)
-│   │   ├── AppConfig.ts
-│   │   └── Database.ts
-│   ├── controllers/             # Controller layer (API logic)
-│   │   └── AggregationController.ts
-│   ├── models/                  # Mongoose models
-│   │   └── OrderModel.ts
-│   ├── repositories/            # Aggregation logic (MongoDB queries)
-│   │   └── AggregationRepo.ts
-│   ├── routes/                  # Express routing
-│   │   └── AggregationRoute.ts
-│   ├── services/                # Service layer (business logic)
-│   │   └── AggregationService.ts
-│   ├── server.ts                # Entry point for server
-│   └── seed.ts                  # Database seeding script
-├── .env                         # Environment variables
-├── .env.sample                  # Sample environment file
-├── package.json                 # NPM package definitions
-├── package-lock.json            # NPM dependency lock
-├── tsconfig.json                # TypeScript configuration
-├── README.md
+├── main/
+│   ├── node_modules/                # Node.js dependencies
+│   ├── screenshots/                 # Screenshots (e.g., Postman API results)
+│   └── src/
+│       ├── config/                  # Configuration files (e.g., DB setup)
+│       │   ├── AppConfig.ts
+│       │   └── Database.ts
+│       ├── controllers/             # Controller layer (handles API requests)
+│       │   ├── AggregationController.ts
+│       │   └── IndexingController.ts
+│       ├── models/                  # Mongoose schemas/models
+│       │   └── OrderModel.ts
+│       ├── repositories/            # DB query logic (aggregation/indexing)
+│       │   ├── AggregationRepo.ts
+│       │   └── IndexingRepo.ts
+│       ├── routes/                  # Route definitions
+│       │   ├── AggregationRoute.ts
+│       │   └── IndexingRoute.ts
+│       ├── seed/                    # DB seeding script
+│       │   └── Seed.ts
+│       ├── services/                # Business logic layer
+│       │   ├── AggregationService.ts
+│       │   └── IndexingService.ts
+│       ├── index.ts                 # Base index file
+│       └── server.ts                # Express server entry point
+├── .env                             # Environment variables
+├── .env.sample                      # Sample env file for setup reference
+├── package.json                     # Project metadata and dependencies
+├── package-lock.json                # Dependency lock file
+├── tsconfig.json                    # TypeScript configuration
+├── README.md                        # Project documentation
 ```
 
 ---
